@@ -1,8 +1,8 @@
 // Different methods to clone an object
 
-//1. Object.assign
+//1. Object.assign (Merging 2 objects )
 
-var persons ={
+var persons = {
     name:'Srashti',
      age: 31
   }
@@ -38,8 +38,7 @@ console.log(newPerson1);
 
 //3. With the help of spread operator
 
-var persons =
-  {
+var persons = {
     name:'Srashti',
     age: 31
   }
@@ -54,8 +53,7 @@ console.log(newPerson1);
 
 // 4. Json.parse method
 
-var persons =
-  {
+var persons = {
     name: {
       firstName: 'Srashti',
       lastName: {
@@ -76,3 +74,32 @@ console.log(newObject);
 //       lastName: [object Object] { ... }
 //     }
 //   }
+
+//5. Object.create
+
+var persons =
+  {
+    name: {
+      firstName: 'Srashti',
+      lastName: {
+        middle:'Gupta',
+        surname: 'Gupta'
+      }
+    },
+    age: 31
+  }
+
+var abc = Object.create(persons);
+console.log(abc);
+
+// [object Object] {
+//     age: 31,
+//     name: [object Object] {
+//       firstName: "Srashti",
+//       lastName: [object Object] { ... }
+//     }
+//   }
+
+// whenver we create objects like this
+
+Object.getPrototypeOf(persons) === abc;   // true
