@@ -16,7 +16,7 @@ var b = new Object();
 console.log(a==b);   // False
 
 
-// Scenario 3
+// Scenario 3 Usage of JSON.parse and JSON.stringify for deep clonning.
 
 var a = {
     name:'srashti',
@@ -36,4 +36,22 @@ var a = {
                                     //     age: 31,
                                     //     name: "srashti"
                                     // }
+
+
+// Scenario 4: Checking the equality of objects created thru Object.create()
+
+var persons =
+  {
+    name: {
+      firstName: 'Srashti',
+      lastName: {
+        middle:'Gupta',
+        surname: 'Gupta'
+      }
+    },
+    age: 31
+  }
+
+var abc = Object.create(persons);
+console.log(Object.getPrototypeOf(abc) === persons)
     
