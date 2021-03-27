@@ -1,0 +1,12 @@
+/* CSS transforms allow you to move, rotate, scale, and skew elements. */
+
+.div {
+transform: rotateX(20deg);
+transform: rotateY(20deg);
+transform: scaleX(2);   /* this is used to increase or decrease the width of the element */
+transform: scaleY(3);   /* this is used to increase or decrease the height of the element */
+transform: translate(50px, 100px); /* this is used to move the element from the current position to the specified position */
+transform: skewX(20deg);    /* this is used to skew the element at a given angle along x axis */
+transform: skewY(20deg);    /* this is used to skew the element at a given angle along y axis */
+}
+
